@@ -221,9 +221,7 @@ html {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-  -webkit-filter: none;
-  filter: none; }
+  filter: grayscale(1); }
 
 body {
   color: #100f0e; }
