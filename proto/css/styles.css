@@ -113,6 +113,8 @@ footer {
               left: 0;
               height: auto;
               width: 100%; } }
+          footer .footer-content .footerLinks .linkItemList li a {
+            color: #fff; }
       footer .footer-content .footerLinks ul {
         padding: 0; }
       @media screen and (min-width: 768px) {
