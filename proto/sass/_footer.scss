@@ -148,6 +148,11 @@ footer {
           @include breakpoint($min, $portrait) {
             @include displayVisuallyHidden;
           }
+
+          & a {
+            color: #fff;
+          }
+
         }
       }
 
