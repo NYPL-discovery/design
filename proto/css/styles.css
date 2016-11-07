@@ -2,6 +2,236 @@
 /* Sans Serif */
 /* Serif */
 /* Times New Roman-based stack */
+table.generic-table {
+  border-top: 2px solid #dddbd9;
+  margin-top: 1rem; }
+  table.generic-table th {
+    white-space: nowrap;
+    padding-right: 1rem;
+    color: #e32b31;
+    text-decoration: underline;
+    cursor: pointer; }
+    table.generic-table th:hover, table.generic-table th:visited:hover {
+      color: #e9585d; }
+
+.status.ready {
+  color: #4C842E; }
+.status.requested {
+  color: #1980a9; }
+.status.cancelled, .status.completed {
+  color: #7B756F; }
+
+/*
+** Usage:
+** @include breakpoint($min, $tablet) {...}
+** OR
+** @include breakpoint($max, $desktop) {...}
+** OR
+** @include breakpoint(null, $palm, $tablet) {...}
+*/
+/*
+** Footer Styles
+**
+**/
+/*variables for Footer*/
+/* VISUALLY HIDE ELEMENTS
+ * ---------------------
+ * Usage: Visually hides an element from the screen
+ * but is still readable by screen readers for accessibility.
+*/
+/* DISPLAY VISUALLY HIDDEN ELEMENTS
+ * ---------------------
+ * Usage: Displays an element that is visually hidden.
+*/
+footer {
+  box-sizing: content-box;
+  padding: 15px 20px 100px;
+  background: #54514A;
+  color: #fff;
+  font-family: "Kievit-Medium";
+  height: 310px;
+  min-height: 280px;
+  position: relative;
+  clear: both; }
+  footer a {
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none; }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline; }
+  footer .logoText {
+    font-family: "nypl-moon";
+    font-size: 82px;
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+    @media screen and (min-width: 768px) {
+      footer .logoText {
+        font-size: 75px;
+        top: 15px;
+        left: 15%; } }
+    @media screen and (min-width: 1024px) {
+      footer .logoText {
+        font-size: 80px;
+        left: 13%;
+        top: 30px; } }
+  footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 75px; }
+    footer .footer-content .footerLinks {
+      font-size: 16px;
+      line-height: 35px;
+      margin: 0;
+      padding: 0;
+      order: 2;
+      list-style: none;
+      text-align: right;
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        footer .footer-content .footerLinks {
+          width: auto; } }
+      footer .footer-content .footerLinks .linkItemList {
+        margin: 0; }
+        footer .footer-content .footerLinks .linkItemList li {
+          position: absolute;
+          left: -10000px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden; }
+          footer .footer-content .footerLinks .linkItemList li:first-child {
+            position: relative;
+            left: 0;
+            height: auto;
+            width: 100%; }
+          @media screen and (min-width: 768px) {
+            footer .footer-content .footerLinks .linkItemList li {
+              position: relative;
+              left: 0;
+              height: auto;
+              width: 100%; } }
+      footer .footer-content .footerLinks ul {
+        padding: 0; }
+      @media screen and (min-width: 768px) {
+        footer .footer-content .footerLinks li {
+          float: left;
+          width: 135px; }
+          footer .footer-content .footerLinks li:first-child {
+            width: 110px; } }
+      @media screen and (min-width: 1024px) {
+        footer .footer-content .footerLinks li {
+          width: 155px; }
+          footer .footer-content .footerLinks li:first-child {
+            margin-right: 110px; }
+          footer .footer-content .footerLinks li:nth-child(2) {
+            margin-right: 60px; } }
+      @media screen and (min-width: 1500px) {
+        footer .footer-content .footerLinks li:first-child, footer .footer-content .footerLinks li:nth-child(2) {
+          width: 155px;
+          margin-right: 0; } }
+      @media screen and (min-width: 768px) {
+        footer .footer-content .footerLinks {
+          order: 1;
+          margin: 0;
+          font-size: 13px;
+          line-height: 25px;
+          text-align: left; } }
+      @media screen and (min-width: 1024px) {
+        footer .footer-content .footerLinks {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 30px; } }
+      @media screen and (min-width: 1500px) {
+        footer .footer-content .footerLinks {
+          margin-right: 70px;
+          order: 2; } }
+    footer .footer-content .socialMedia {
+      order: 1;
+      margin: 20px -6px 15px 0;
+      list-style-type: none;
+      text-align: right;
+      width: 135px; }
+      footer .footer-content .socialMedia li {
+        display: inline-block; }
+        footer .footer-content .socialMedia li a {
+          display: block;
+          color: #FFF;
+          font-size: 40px;
+          line-height: 45px;
+          text-decoration: none; }
+          footer .footer-content .socialMedia li a .replaced-text {
+            /* h5bp technique */
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px; }
+          @media screen and (min-width: 768px) {
+            footer .footer-content .socialMedia li a {
+              font-size: 50px; } }
+        footer .footer-content .socialMedia li [class^="icon-"],
+        footer .footer-content .socialMedia li [class*=" icon-"] {
+          padding: 0; }
+        footer .footer-content .socialMedia li [data-icon]:before,
+        footer .footer-content .socialMedia li [class^="icon-"]:before,
+        footer .footer-content .socialMedia li [class*=" icon-"]:before {
+          margin: 0 5px 0 0 !important; }
+      @media screen and (min-width: 768px) {
+        footer .footer-content .socialMedia {
+          width: 170px;
+          margin-top: 30px; } }
+      @media screen and (min-width: 1024px) {
+        footer .footer-content .socialMedia {
+          margin-top: 30px; } }
+      @media screen and (min-width: 1500px) {
+        footer .footer-content .socialMedia {
+          margin-top: 0;
+          width: 280px; } }
+    @media screen and (min-width: 768px) {
+      footer .footer-content {
+        flex-direction: column;
+        margin-top: 0;
+        margin: 0;
+        right: 6%;
+        position: absolute;
+        align-items: flex-end; } }
+    @media screen and (min-width: 1024px) {
+      footer .footer-content {
+        left: 35%; } }
+    @media screen and (min-width: 1500px) {
+      footer .footer-content {
+        flex-direction: row-reverse;
+        align-items: flex-start; } }
+  footer .copyright {
+    margin: 35px 0 0 0;
+    font-size: 12px;
+    font-family: "Kievit-Book";
+    text-align: right; }
+    @media screen and (min-width: 768px) {
+      footer .copyright {
+        font-size: 20px;
+        position: absolute;
+        left: 15%;
+        top: 110px;
+        font-size: 11px; } }
+    @media screen and (min-width: 1024px) {
+      footer .copyright {
+        left: 13%;
+        top: 140px;
+        font-size: 13px; } }
+  @media screen and (min-width: 768px) {
+    footer {
+      padding: 15px 0; } }
+  @media screen and (min-width: 1024px) {
+    footer {
+      padding: 30px 0; } }
+
 html {
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
