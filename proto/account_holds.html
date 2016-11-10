@@ -11,10 +11,11 @@
   <script
           src="https://code.jquery.com/jquery-3.1.0.min.js"
           integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-          crossorigin="anonymous"></script>
+          crossorigin="anonymous">
+  </script>
   <script type="text/javascript" src="js/header.js"></script>
 </head>
-<body>
+<body class="accountHolds">
 <div id="skip" tabindex="-1"><a href="#mainContent">Skip to Main Content</a></div>
 <div id="Header-Placeholder">
   <style>
@@ -26,55 +27,158 @@
             min-height: 209px;
           }
         }
-        </style>
-        <script type="text/javascript" src="https://header.nypl.org/dgx-header.min.js?urls=absolute" async=""></script>
+  </style>
+  <script type="text/javascript" src="https://header.nypl.org/dgx-header.min.js?urls=absolute" async=""></script>
 </div>
 <main class="main-page">
   <div class="page-header">
     <div class="content-wrapper">
       <div class="breadcrumb hidden"><a href="/">Home</a> > <a href="#">Ipsotum</a> > <a href="#">Mit Fantaculuim</a> > Holds</div>
-      <h1>Your Account Checked Out Items &amp; Holds</h1>
+      <h1>Your Account: Checked Out Items &amp; Holds</h1>
     </div>
   </div>
   <div class="content-wrapper">
-    <table id="holds-table" class="generic-table tablesorter">
+  <table id="holds-table" class="generic-table tablesorter">
     <thead>
-    <tr>
-    <th>Date requested</th>
-    <th>Item</th>
-    <th>Location</th>
-    <th>Status</th>
-    <th>ETA</th>
-    <th></th>
-    </tr>
+      <tr>
+        <th>Date requested</th>
+        <th>Item</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>ETA</th>
+        <th></th>
+      </tr>
     </thead>
     <tbody>
-    <tr>
-    <td data-value="2016-09-01">Sep 1, 2016</td>
-    <td>
-      <a href="../item/v1b_alpha.html">A political register, setting forth the principles...</a><br />
-      Brownlow, William Gannaway, 1805-1877<br />
-      Call number: IO (1844)
-    </td>
-    <td>
-      <a href="https://www.nypl.org/locations/schwarzman">Stephen A. Schwarzman Building</a><br />
-      <a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7536903,-73.9858051,17z/data=!3m1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m13!1m7!3m6!1s0x89c259aa982c98b1:0x82f102a365e99b51!2s476+5th+Ave,+New+York,+NY+10018!3b1!8m2!3d40.7536863!4d-73.9836111!3m4!1s0x0:0x3b51df6e509a734c!8m2!3d40.7531821!4d-73.9822534">476 Fifth Avenue</a> at 42nd St<br />
-      <!-- New York, NY 10018<br /> -->
-      <a href="https://www.nypl.org/locations/divisions/milstein">Milstein Division</a>, 1st Floor, Room 121
-    </td>
-    <td class="centered" data-value="1">
-      <span class="status requested">Requested from offsite storage</span>
-    </td>
-    <td data-value="2016-09-05">
-      Oct 27, 2016
-      <a href="#help" title="For offsite materials, requests made before 2:30 PM will be delivered the following business day. Requests made after 2:30 PM on Fridays or over the weekend will be delivered the following Tuesday.">(?)</a>
-    </td>
-    <td>
-      <a href="../holdconfirmation/v1b_alpha.html" class="button">View hold</a>
-    </td>
+      <tr>
+        <td data-value="2016-09-01" class="requestDate">Sep 1, 2016</td>
+        <td>
+          <a href="../item/v1b_alpha.html" class="itemTitle">A political register, setting forth the principles...</a><br />
+          <span class="itemDescription">Brownlow, William Gannaway, 1805-1877</span><br />
+          <span class="callNumber">Call number: IO (1844)</span>
+        </td>
+        <td>
+          <a class="locationLink" href="https://www.nypl.org/locations/schwarzman">Stephen A. Schwarzman Building</a>
+          <br />
+          <span class="mapMarker">
+            <a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7536903,-73.9858051,17z/data=!3m1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m13!1m7!3m6!1s0x89c259aa982c98b1:0x82f102a365e99b51!2s476+5th+Ave,+New+York,+NY+10018!3b1!8m2!3d40.7536863!4d-73.9836111!3m4!1s0x0:0x3b51df6e509a734c!8m2!3d40.7531821!4d-73.9822534">476 Fifth Avenue</a> at 42nd St</span>
+            <br />
+          <!-- New York, NY 10018<br /> -->
+          <span class="division"><a href="https://www.nypl.org/locations/divisions/milstein">Milstein Division</a>, 1st Floor, Room 121</span>
+        </td>
+        <td class="centered" data-value="1">
+          <span class="status requested">Requested from offsite storage</span>
+        </td>
+        <td data-value="2016-09-05" class="etaDate">
+          Oct 27, 2016
+          <a href="#help" title="For offsite materials, requests made before 2:30 PM will be delivered the following business day. Requests made after 2:30 PM on Fridays or over the weekend will be delivered the following Tuesday." class="needHelp">(?)</a>
+        </td>
+        <td>
+          <a href="../holdconfirmation/v1b_alpha.html" class="button">View hold</a>
+        </td>
+      </tr>
+      <tr>
+        <td data-value="2016-09-01" class="requestDate">Sep 1, 2016</td>
+        <td>
+          <a href="../item/v1a_monograph.html" class="itemTitle">The Federalist papers</a><br />
+          <span class="itemDescription">New Haven: Yale University Press, 2009</span><br />
+          <span class="callNumber">Call number: IB 09-5067</span>
+        </td>
+        <td>
+          <a href="https://www.nypl.org/locations/schwarzman" class="locationLink">Stephen A. Schwarzman Building</a><br />
+          <span class="mapMarker"><a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7536903,-73.9858051,17z/data=!3m1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m13!1m7!3m6!1s0x89c259aa982c98b1:0x82f102a365e99b51!2s476+5th+Ave,+New+York,+NY+10018!3b1!8m2!3d40.7536863!4d-73.9836111!3m4!1s0x0:0x3b51df6e509a734c!8m2!3d40.7531821!4d-73.9822534">476 Fifth Avenue</a> at 42nd St</span><br />
+          <!-- New York, NY 10018<br /> -->
+          <a href="https://www.nypl.org/locations/divisions/milstein" class="division">Milstein Division</a>, 1st Floor, Room 121
+        </td>
+        <td class="centered" data-value="1">
+          <span class="status requested">Requested</span>
+        </td>
+        <td data-value="2016-09-02" class="etaDate">
+          Sep 2, 2016
+          <a href="#help" title="Approximately 90% of research requests are delivered on the day they are requested. If you request a book when you are at the library and the catalog record indicates that it is stored on-site, the average delivery time is 45 minutes." class="needHelp">(?)</a>
+        </td>
+        <td>
+          <a href="../hold/v1a.html" class="button">View or manage hold</a>
+        </td>
+      </tr>
+      <tr>
+      <td data-value="2016-08-29" class="requestDate">Aug 29, 2016</td>
+      <td>
+        <a href="#" class="itemTitle">Alexander Hamilton, American</a><br />
+        <span class="itemDescription">Brookhiser, Richard New York: Free Press, 1999</span><br />
+        <span class="callNumber">Call number: II 99-4791</span>
+      </td>
+      <td>
+        Off-site request from Princeton for use at<br />
+        <a href="https://www.nypl.org/locations/schwarzman">Stephen A. Schwarzman Building</a><br />
+        <span class="mapMarker"><a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7536903,-73.9858051,17z/data=!3m1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m13!1m7!3m6!1s0x89c259aa982c98b1:0x82f102a365e99b51!2s476+5th+Ave,+New+York,+NY+10018!3b1!8m2!3d40.7536863!4d-73.9836111!3m4!1s0x0:0x3b51df6e509a734c!8m2!3d40.7531821!4d-73.9822534">476 Fifth Avenue</a> at 42nd St</span><br />
+        <!-- New York, NY 10018<br /> -->
+        <span class="division"><a href="https://www.nypl.org/locations/divisions/milstein" class="division">Milstein Division</a>, 2nd Floor, Room 121</span>
+      </td>
+      <td class="centered" data-value="3">
+        <span class="status in-transit">In transit</span>
+      </td>
+      <td data-value="2016-09-01">
+        Sep 1, 2016
+        <a href="#help" title="Approximately 90% of research requests are delivered on the day they are requested. If you request a book when you are at the library and the catalog record indicates that it is stored on-site, the average delivery time is 45 minutes." class="needHelp">(?)</a>
+      </td>
+      <td>
+        <a href="../hold/v1a.html" class="button">View or manage hold</a>
+      </td>
     </tr>
     </tbody>
-    </table>
+  </table>
+  <div class="responsiveTable">
+    <h2>Responsive collapse (by row)</h2>
+    <div class="Rtable Rtable--6cols Rtable--collapse ">
+
+        <div class="Rtable-cell tableRowHead">Date Requested</div>
+        <div class="Rtable-cell tableRowHead">Item</div>
+        <div class="Rtable-cell tableRowHead">Location</div>
+        <div class="Rtable-cell tableRowHead">Status</div>
+        <div class="Rtable-cell tableRowHead">ETA</div>
+        <div class="Rtable-cell tableRowHead">&nbsp;</div>
+
+
+        <div data-value="2016-09-01" class="Rtable-cell Rtable-cell--head requestDate">9/1</div>
+        <div class="Rtable-cell">
+          <a href="../item/v1b_alpha.html" class="itemTitle">A political register, setting forth the principles...</a><br />
+          <span class="itemDescription">Brownlow, William Gannaway, 1805-1877</span><br />
+          <span class="callNumber">Call number: IO (1844)</span>
+        </div>
+        <div class="Rtable-cell">
+          <a class="locationLink" href="https://www.nypl.org/locations/schwarzman">Stephen A. Schwarzman Building</a>
+          <br />
+          <span class="mapMarker">
+            <a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7536903,-73.9858051,17z/data=!3m1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m13!1m7!3m6!1s0x89c259aa982c98b1:0x82f102a365e99b51!2s476+5th+Ave,+New+York,+NY+10018!3b1!8m2!3d40.7536863!4d-73.9836111!3m4!1s0x0:0x3b51df6e509a734c!8m2!3d40.7531821!4d-73.9822534">476 Fifth Avenue</a> at 42nd St</span>
+            <br />
+          <!-- New York, NY 10018<br /> -->
+          <span class="division"><a href="https://www.nypl.org/locations/divisions/milstein">Milstein Division</a>, 1st Floor, Room 121</span>
+        </div>
+        <div class="Rtable-cell">
+          <span class="status requested">Requested from offsite storage</span>
+        </div>
+        <div class="Rtable-cell">
+          Oct 27, 2016
+          <a href="#help" title="For offsite materials, requests made before 2:30 PM will be delivered the following business day. Requests made after 2:30 PM on Fridays or over the weekend will be delivered the following Tuesday." class="needHelp">(?)</a>
+        </div>
+        <div class="Rtable-cell">
+          <a href="../holdconfirmation/v1b_alpha.html" class="button">View hold</a>
+        </div>
+
+
+
+        <div class="Rtable-cell Rtable-cell--head">Sep 1, 2016</div>
+        <div class="Rtable-cell">Has a sword named Longclaw</div>
+        <div class="Rtable-cell">Has a sword named Longclaw</div>
+        <div class="Rtable-cell">Direwolf: Ghost</div>
+        <div class="Rtable-cell">Direwolf: Ghost</div>
+        <div class="Rtable-cell Rtable-cell--foot">
+          <a href="../holdconfirmation/v1b_alpha.html" class="button">View hold</a>
+        </div>
+
+    </div>
+  </div>
   </div>
 </main>
 <footer role="contentinfo">
@@ -126,8 +230,7 @@
   <!-- <div class="copyright">
     <p>© The New York Public Library, {new Date().getFullYear()}</p>
   </div> -->
-  <span class="logoText nypl-icon-logo-type">
-  </span>
+  <span class="logoText nypl-icon-logo-type">&nbsp;</span>
 </footer>
 
 <!-- <div class="feedback">

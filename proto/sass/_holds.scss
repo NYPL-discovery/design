@@ -1,3 +1,14 @@
+//**
+
+// display:none mixin for small screens
+@mixin smallDisplayNone {
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+
+
 table.generic-table {
   border-top: 2px solid $nypllightgray;
   margin-top: 1rem;
@@ -7,11 +18,59 @@ table.generic-table {
     color: $linkcolor;
     text-decoration: underline;
     cursor: pointer;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      background: darken($nypllightgray, 30%);
+      color: #fff;
+      white-space: normal;
+    }
+
     &:hover, &:visited:hover {
       color: $linkhovercolor;
     }
   }
-}
+    /* Zebra striping */
+  tr:nth-of-type(odd) {
+    background: lighten($nypllightgray, 5%);
+  }
+  //
+  td[data-value] {}
+
+  .itemTitle {}
+
+  .locationLink {}
+
+  .mapMarker { // Location
+    @include smallDisplayNone;
+    // @media screen and (max-width: $mobile-breakpoint) {
+    //   display: none;
+    // }
+  }
+
+  .division {
+    font-style: italic;
+  }
+
+  .requested {}
+
+  .itemDescription {
+    @include smallDisplayNone;
+  }
+
+  .callNumber {
+    @media screen and (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  .needHelp {}
+
+  .etaDate {}
+
+  .requestDate {}
+
+
+} // /table.generic-table
 
 .status {
   &.ready {
@@ -23,5 +82,86 @@ table.generic-table {
   &.cancelled,
   &.completed {
     color: $nyplgray;
+  }
+}
+
+// experimental flexible table
+.responsiveTable {
+  /* Variables
+  ================================== */
+  $bw: 2px;  // border width
+
+  /* Tables
+  ================================== */
+  .Rtable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+  }
+
+  .tableRowHead {
+    @include smallDisplayNone;
+    background-color: darken($nyplsearchcolorlight, 10%);
+  }
+
+
+  .Rtable-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  // Default to full width
+    padding: 0.8em;
+    overflow: hidden; // Or flex might break
+    list-style: none;
+    border: solid $bw #fff;
+    background: #eee;
+  }
+
+  .Rtable-row {
+    &:nth-of-type(odd) {
+      background-color: pink;
+    }
+  }
+
+  /* Table column sizing
+  ================================== */
+  .Rtable--2cols > .Rtable-cell  { width: 50%; }
+  .Rtable--3cols > .Rtable-cell  { width: 33.33%; }
+  .Rtable--4cols > .Rtable-cell  { width: 25%; }
+  .Rtable--5cols > .Rtable-cell  { width: 20%; }
+  .Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+
+  /* Responsive
+  ==================================== */
+    @media screen and (max-width: 960px) {
+    .Rtable--collapse  {
+      display: block;
+      > .Rtable-cell { width: 100% !important; }
+      > .Rtable-cell--foot { margin-bottom: 1em; }
+    }
+  }
+
+  // Non-Flex modernizer fallback
+  // .no-flexbox .Rtable {
+  //   display: block;
+  //   > .Rtable-cell { width: 100%; }
+  //   > .Rtable-cell--foot { margin-bottom: 1em; }
+  // }
+  //
+
+// Do some styling
+.button {
+  border: 2px solid #000;
+  border-radius: 20px;
+  font-size: ms(0);
+  font-weight: 900;
+  padding: 10px 20px;
+  text-transform: uppercase;
+
+    &:hover {
+      color: #fff;
+      background: #000;
+      text-decoration: none;
+    }
   }
 }
