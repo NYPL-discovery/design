@@ -12,6 +12,8 @@
 table.generic-table {
   border-top: 2px solid $nypllightgray;
   margin-top: 1rem;
+  overflow: auto;
+  
   th {
     white-space: nowrap;
     padding-right: 1rem;

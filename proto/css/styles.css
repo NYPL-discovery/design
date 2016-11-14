@@ -5,6 +5,7 @@
 table.generic-table {
   border-top: 2px solid #dddbd9;
   margin-top: 1rem;
+  overflow: auto;
   /* Zebra striping */ }
   table.generic-table th {
     white-space: nowrap;
