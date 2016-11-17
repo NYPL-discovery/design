@@ -2,46 +2,69 @@
 /* Sans Serif */
 /* Serif */
 /* Times New Roman-based stack */
-table.generic-table {
+.holdsWrapper [type=button] {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 23px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 25px 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s; }
+  .holdsWrapper [type=button]:hover {
+    background: #000;
+    color: #fff;
+    fill: #fff; }
+  .holdsWrapper [type=button] > a {
+    color: inherit;
+    position: relative;
+    top: -6px;
+    text-decoration: none; }
+  .holdsWrapper [type=button] .svgIcon {
+    position: relative;
+    top: 10px; }
+.holdsWrapper table.generic-table {
   border-top: 2px solid #dddbd9;
   margin-top: 1rem;
   overflow: auto;
   /* Zebra striping */ }
-  table.generic-table th {
+  .holdsWrapper table.generic-table th {
     white-space: nowrap;
     padding-right: 1rem;
     color: #e32b31;
     text-decoration: underline;
     cursor: pointer; }
     @media screen and (max-width: 760px) {
-      table.generic-table th {
+      .holdsWrapper table.generic-table th {
         background: #948f89;
         color: #fff;
         white-space: normal; } }
-    table.generic-table th:hover, table.generic-table th:visited:hover {
+    .holdsWrapper table.generic-table th:hover, .holdsWrapper table.generic-table th:visited:hover {
       color: #e9585d; }
-  table.generic-table tr:nth-of-type(odd) {
+  .holdsWrapper table.generic-table tr:nth-of-type(odd) {
     background: #e9e8e7; }
   @media screen and (max-width: 760px) {
-    table.generic-table .mapMarker {
+    .holdsWrapper table.generic-table .mapMarker {
       display: none; } }
-  table.generic-table .division {
+  .holdsWrapper table.generic-table .division {
     font-style: italic; }
   @media screen and (max-width: 760px) {
-    table.generic-table .itemDescription {
+    .holdsWrapper table.generic-table .itemDescription {
       display: none; } }
   @media screen and (max-width: 760px) {
-    table.generic-table .callNumber {
+    .holdsWrapper table.generic-table .callNumber {
       display: none; } }
-
-.status.ready {
+.holdsWrapper .status.ready {
   color: #4C842E; }
-.status.requested {
+.holdsWrapper .status.requested {
   color: #1980a9; }
-.status.cancelled, .status.completed {
+.holdsWrapper .status.cancelled, .holdsWrapper .status.completed {
   color: #7B756F; }
-
-.responsiveTable {
+.holdsWrapper .responsiveTable {
   /* Variables
   ================================== */
   /* Tables
@@ -50,17 +73,17 @@ table.generic-table {
   ================================== */
   /* Responsive
   ==================================== */ }
-  .responsiveTable .Rtable {
+  .holdsWrapper .responsiveTable .Rtable {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 3em 0;
     padding: 0; }
-  .responsiveTable .tableRowHead {
+  .holdsWrapper .responsiveTable .tableRowHead {
     background-color: #aca8a4; }
     @media screen and (max-width: 760px) {
-      .responsiveTable .tableRowHead {
+      .holdsWrapper .responsiveTable .tableRowHead {
         display: none; } }
-  .responsiveTable .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable-cell {
     box-sizing: border-box;
     flex-grow: 1;
     width: 100%;
@@ -69,36 +92,25 @@ table.generic-table {
     list-style: none;
     border: solid 2px #fff;
     background: #eee; }
-  .responsiveTable .Rtable-row:nth-of-type(odd) {
+  .holdsWrapper .responsiveTable .Rtable-row:nth-of-type(odd) {
     background-color: pink; }
-  .responsiveTable .Rtable--2cols > .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable--2cols > .Rtable-cell {
     width: 50%; }
-  .responsiveTable .Rtable--3cols > .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable--3cols > .Rtable-cell {
     width: 33.33%; }
-  .responsiveTable .Rtable--4cols > .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable--4cols > .Rtable-cell {
     width: 25%; }
-  .responsiveTable .Rtable--5cols > .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable--5cols > .Rtable-cell {
     width: 20%; }
-  .responsiveTable .Rtable--6cols > .Rtable-cell {
+  .holdsWrapper .responsiveTable .Rtable--6cols > .Rtable-cell {
     width: 16.6%; }
   @media screen and (max-width: 960px) {
-    .responsiveTable .Rtable--collapse {
+    .holdsWrapper .responsiveTable .Rtable--collapse {
       display: block; }
-      .responsiveTable .Rtable--collapse > .Rtable-cell {
+      .holdsWrapper .responsiveTable .Rtable--collapse > .Rtable-cell {
         width: 100% !important; }
-      .responsiveTable .Rtable--collapse > .Rtable-cell--foot {
+      .holdsWrapper .responsiveTable .Rtable--collapse > .Rtable-cell--foot {
         margin-bottom: 1em; } }
-  .responsiveTable .button {
-    border: 2px solid #000;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 900;
-    padding: 10px 20px;
-    text-transform: uppercase; }
-    .responsiveTable .button:hover {
-      color: #fff;
-      background: #000;
-      text-decoration: none; }
 
 /*
 ** Usage:
