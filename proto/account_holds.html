@@ -28,7 +28,8 @@
           }
         }
   </style>
-  <script type="text/javascript" src="https://header.nypl.org/dgx-header.min.js?urls=absolute" async=""></script>
+  <script type="text/javascript" src="https://header.nypl.org/dgx-header.min.js?urls=absolute" async="">
+  </script>
 </div>
 <main class="main-page">
   <div class="page-header">
@@ -37,7 +38,15 @@
       <h1>Your Account: Checked Out Items &amp; Holds</h1>
     </div>
   </div>
-  <div class="content-wrapper">
+  <div class="content-wrapper holdsWrapper">
+    <button type="button" name="button" class="button">
+      <a href="#">
+        <svg width="32" height="32" viewBox="0 0 32 32" class="svgIcon">
+          <title>wedge.left.icon.svg</title>
+            <polygon points="19.156 23.563 11.593 16 19.156 8.438 20.563 9.845 14.408 16 20.563 22.155 19.156 23.563" />
+        </svg>Go Back
+      </a>
+    </button>
   <table id="holds-table" class="generic-table tablesorter">
     <thead>
       <tr>
@@ -53,7 +62,7 @@
       <tr>
         <td data-value="2016-09-01" class="requestDate">Sep 1, 2016</td>
         <td>
-          <a href="../item/v1b_alpha.html" class="itemTitle">A political register, setting forth the principles...</a><br />
+          <a href="#" class="itemTitle">A political register, setting forth the principles...</a><br />
           <span class="itemDescription">Brownlow, William Gannaway, 1805-1877</span><br />
           <span class="callNumber">Call number: IO (1844)</span>
         </td>
@@ -98,7 +107,7 @@
           <a href="#help" title="Approximately 90% of research requests are delivered on the day they are requested. If you request a book when you are at the library and the catalog record indicates that it is stored on-site, the average delivery time is 45 minutes." class="needHelp">(?)</a>
         </td>
         <td>
-          <a href="../hold/v1a.html" class="button">View or manage hold</a>
+          <a href="#" class="button">View or manage hold</a>
         </td>
       </tr>
       <tr>
@@ -123,7 +132,7 @@
         <a href="#help" title="Approximately 90% of research requests are delivered on the day they are requested. If you request a book when you are at the library and the catalog record indicates that it is stored on-site, the average delivery time is 45 minutes." class="needHelp">(?)</a>
       </td>
       <td>
-        <a href="../hold/v1a.html" class="button">View or manage hold</a>
+        <a href="#" class="button">View or manage hold</a>
       </td>
     </tr>
     </tbody>
@@ -142,11 +151,13 @@
 
         <div data-value="2016-09-01" class="Rtable-cell Rtable-cell--head requestDate">9/1</div>
         <div class="Rtable-cell">
-          <a href="../item/v1b_alpha.html" class="itemTitle">A political register, setting forth the principles...</a><br />
-          <span class="itemDescription">Brownlow, William Gannaway, 1805-1877</span><br />
+          <a href="#" class="itemTitle">A political register, setting forth the principles...</a>
+          <br />
+          <span class="itemDescription">Brownlow, William Gannaway, 1805-1877</span>
+          <br />
           <span class="callNumber">Call number: IO (1844)</span>
         </div>
-        <div class="Rtable-cell">
+        <div class="Rtable-cell physcialLocation">
           <a class="locationLink" href="https://www.nypl.org/locations/schwarzman">Stephen A. Schwarzman Building</a>
           <br />
           <span class="mapMarker">
@@ -165,9 +176,6 @@
         <div class="Rtable-cell">
           <a href="../holdconfirmation/v1b_alpha.html" class="button">View hold</a>
         </div>
-
-
-
         <div class="Rtable-cell Rtable-cell--head">Sep 1, 2016</div>
         <div class="Rtable-cell">Has a sword named Longclaw</div>
         <div class="Rtable-cell">Has a sword named Longclaw</div>
