@@ -415,8 +415,7 @@ input[type=radio], input[type=checkbox] {
   .horizontal li {
     display: inline-block;
     margin-left: 0;
-    margin-right: 0.35em;
-    vertical-align: bottom; }
+    margin-right: 0.35em; }
     .horizontal li:last-child {
       margin-right: 0; }
 
@@ -479,11 +478,6 @@ header .content {
   @media screen and (max-width: 965px) {
     header .content {
       width: 100%; } }
-header .service {
-  background-color: #e32b31; }
-  @media screen and (max-width: 965px) {
-    header .service {
-      display: table-footer-group; } }
 @media screen and (max-width: 965px) {
   header {
     display: table;
@@ -525,46 +519,6 @@ header.collapsed {
       padding: 0.1em 0.4em 0.1em; }
     header.collapsed .nav-buttons .search {
       display: none; }
-
-.service-buttons {
-  font-size: 0.8rem;
-  padding: 0;
-  text-transform: uppercase; }
-  @media screen and (max-width: 965px) {
-    .service-buttons {
-      display: none;
-      padding-top: 5px;
-      width: 100%; }
-      .service-buttons li {
-        border-bottom: 1px solid white;
-        float: left;
-        line-height: 2;
-        margin: 0 0 5px 0;
-        width: 50%; } }
-  .service-buttons a {
-    text-decoration: underline; }
-  .service-buttons li > a {
-    border: none;
-    color: white;
-    display: block;
-    font-weight: bold;
-    padding: 0 0.5em;
-    position: relative;
-    text-decoration: none;
-    transition: all 0.2s; }
-    .service-buttons li > a:hover, .service-buttons li > a.active {
-      background-color: white;
-      color: #e32b31; }
-    .service-buttons li > a.donate {
-      background-color: white;
-      color: #e32b31; }
-    .service-buttons li > a.donate:hover {
-      background-color: white; }
-    .service-buttons li > a.collapsible:after {
-      display: inline-block;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-left: 0.5em; }
 
 .login-toggle, .email-toggle {
   position: relative; }
@@ -704,7 +658,8 @@ header.collapsed .login-toggle {
       color: #e32b31; }
   .nav-buttons li {
     box-shadow: inset 0 0 0 #e32b31;
-    transition: box-shadow 0.2s; }
+    transition: box-shadow 0.2s;
+    vertical-align: bottom; }
   .nav-buttons li:hover, .nav-buttons li.active {
     box-shadow: inset 0 -4px 0 #e32b31; }
 
@@ -1173,5 +1128,58 @@ footer ul {
     .footerLinks > li {
       float: none;
       width: auto; } }
+
+header .service {
+  background-color: #c11a1f;
+  height: 36px;
+  padding-top: 16px;
+  padding-bottom: 14px; }
+  header .service .donate {
+    margin: 0px 5px;
+    padding: 8px 23px 20px; }
+  @media screen and (max-width: 965px) {
+    header .service {
+      display: table-footer-group; } }
+header .service-buttons {
+  font-size: 0.8rem;
+  padding: 0;
+  text-transform: uppercase; }
+  @media screen and (max-width: 965px) {
+    header .service-buttons {
+      display: none;
+      padding-top: 5px;
+      width: 100%; }
+      header .service-buttons li {
+        border-bottom: 1px solid white;
+        float: left;
+        line-height: 2;
+        margin: 0 0 5px 0;
+        width: 50%; } }
+  header .service-buttons a {
+    text-decoration: underline; }
+  header .service-buttons li > a {
+    border: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s; }
+    header .service-buttons li > a:hover, header .service-buttons li > a.active {
+      background-color: white;
+      color: #e32b31; }
+    header .service-buttons li > a.donate {
+      background-color: white;
+      color: #e32b31;
+      margin: 0 5px;
+      padding: 10px 10px 20px 10px; }
+    header .service-buttons li > a.donate:hover {
+      background-color: white; }
+    header .service-buttons li > a.collapsible:after {
+      display: inline-block;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-left: 0.5em; }
 
 /*# sourceMappingURL=styles.css.map */
