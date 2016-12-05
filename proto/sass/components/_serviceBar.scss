@@ -1,0 +1,78 @@
+//  _serviceBar.scss /
+header {
+  .service {
+    background-color: darken($nyplred,10%);
+    height: 36px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    .donate {
+      margin: 0px 5px;
+      padding: 8px 23px 20px;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      display: table-footer-group;
+    }
+  }
+
+  .service-buttons {
+    font-size: 0.8rem;
+    padding: 0;
+    text-transform: uppercase;
+
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      display: none;
+      padding-top: 5px;
+      width: 100%;
+
+      li {
+        border-bottom: 1px solid white;
+        float: left;
+        line-height: 2;
+        margin: 0 0 5px 0;
+        width: 50%;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    li > a {
+      border: none;
+      color: white;
+      display: block;
+      font-weight: bold;
+      padding: 0 0.5em;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.2s;
+
+      &:hover,
+      &.active {
+        background-color: white;
+        color: $linkcolor;
+      }
+
+      &.donate {
+        background-color: white;
+        color: $nyplred;
+        margin: 0 5px;
+        padding: 10px 10px 20px 10px;
+      }
+
+      &.donate:hover {
+        background-color: white;
+      }
+
+      &.collapsible:after {
+        display: inline-block;
+        font-size: 0.85em;
+        font-weight: bold;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
