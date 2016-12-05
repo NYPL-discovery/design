@@ -244,7 +244,7 @@ input[type=radio], input[type=checkbox] {
     display: inline-block;
     margin-left: 0;
     margin-right: 0.35em;
-    vertical-align: bottom;
+    //vertical-align: bottom;
 
     &:last-child {
       margin-right: 0;
@@ -323,13 +323,13 @@ header {
     }
   }
 
-  .service {
-    background-color: $nyplred;
-
-    @media screen and (max-width: $mobile-breakpoint) {
-      display: table-footer-group;
-    }
-  }
+  // .service {
+  //   background-color: $nyplred;
+  //
+  //   @media screen and (max-width: $mobile-breakpoint) {
+  //     display: table-footer-group;
+  //   }
+  // }
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: table;
@@ -382,6 +382,7 @@ header {
       margin-top: 0;
       text-transform: uppercase;
 
+
       li {
         box-shadow: none;
       }
@@ -397,61 +398,61 @@ header {
   }
 }
 
-.service-buttons {
-  font-size: 0.8rem;
-  padding: 0;
-  text-transform: uppercase;
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    display: none;
-    padding-top: 5px;
-    width: 100%;
-
-    li {
-      border-bottom: 1px solid white;
-      float: left;
-      line-height: 2;
-      margin: 0 0 5px 0;
-      width: 50%;
-    }
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  li > a {
-    border: none;
-    color: white;
-    display: block;
-    font-weight: bold;
-    padding: 0 0.5em;
-    position: relative;
-    text-decoration: none;
-    transition: all 0.2s;
-
-    &:hover, &.active {
-      background-color: white;
-      color: $linkcolor;
-    }
-
-    &.donate {
-      background-color: white;
-      color: $nyplred;
-    }
-
-    &.donate:hover {
-      background-color: white;
-    }
-
-    &.collapsible:after {
-      display: inline-block;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-left: 0.5em;
-    }
-  }
-}
+// .service-buttons {
+//   font-size: 0.8rem;
+//   padding: 0;
+//   text-transform: uppercase;
+//
+//   @media screen and (max-width: $mobile-breakpoint) {
+//     display: none;
+//     padding-top: 5px;
+//     width: 100%;
+//
+//     li {
+//       border-bottom: 1px solid white;
+//       float: left;
+//       line-height: 2;
+//       margin: 0 0 5px 0;
+//       width: 50%;
+//     }
+//   }
+//
+//   a {
+//     text-decoration: underline;
+//   }
+//
+//   li > a {
+//     border: none;
+//     color: white;
+//     display: block;
+//     font-weight: bold;
+//     padding: 0 0.5em;
+//     position: relative;
+//     text-decoration: none;
+//     transition: all 0.2s;
+//
+//     &:hover, &.active {
+//       background-color: white;
+//       color: $linkcolor;
+//     }
+//
+//     &.donate {
+//       background-color: white;
+//       color: $nyplred;
+//     }
+//
+//     &.donate:hover {
+//       background-color: white;
+//     }
+//
+//     &.collapsible:after {
+//       display: inline-block;
+//       font-size: 0.85em;
+//       font-weight: bold;
+//       margin-left: 0.5em;
+//     }
+//   }
+// }
 
 .login-toggle, .email-toggle {
   position: relative;
@@ -612,6 +613,7 @@ header.collapsed .login-toggle {
       line-height: 2;
       margin: 0 0 5px 0;
       width: 50%;
+
     }
 
     li.search {
@@ -644,6 +646,7 @@ header.collapsed .login-toggle {
   li {
     box-shadow: inset 0 0 0 $linkcolor;
     transition: box-shadow 0.2s;
+    vertical-align: bottom;
   }
 
   li:hover, li.active {
@@ -1372,3 +1375,5 @@ footer ul {
 }
 
 // end footer
+
+@import 'components/serviceBar';
